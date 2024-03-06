@@ -1,0 +1,15 @@
+{%extends 'parent.html'%}
+
+
+
+   {%block content%}
+<form method="post">
+   {%csrf_token%}
+   <label>Name</label>
+   <input type="text" name="tname" required>
+   <label>price</label>
+   <input type="number" name="tnumber" required>
+   <input type="submit" value="add">
+</form>
+<div style="color: red">server side error{{message}}</div>
+{%endblock%}

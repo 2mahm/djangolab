@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{data}}
+<table border="1" width="100%">
+    <tr>
+        <td>name</td>
+                <td>age</td>
+    </tr>
+    <tr>
+        {%for track in data%}
+    <td>{{track.name}}</td>
+        <td>{{track.age}}</td>
+            </tr>
+
+
+    {%endfor%}
+</table>
+<h1>hellomy lisatar</h1>
+</body>
+</html>

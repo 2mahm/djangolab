@@ -1,0 +1,31 @@
+{%extends 'parent.html'%}
+
+
+
+   {%block content%}
+<table border="1" width="100">
+    <tr>
+        <td>id</td>
+                <td>name</td>
+
+                <td>price</td>
+
+    </tr>
+      <a href="{% url 'productAdd'%}"> Addproduct</a>
+          <a href="{% url 'productAddusingForm'%}"> Addproductusingform</a>
+
+
+    {%for pro in data%}
+    <tr>
+
+        <td>{{pro.id}}</td>
+                <td>{{pro.name}}</td>
+        <td>{{pro.price}}</td>
+   <td><a href="{%url 'proshow' pro.id%}">show</a></td>
+   <td><a href="{%url 'proupdate' pro.id%}">update</a></td>
+   <td><a href="{%url 'prodel' pro.id%}">delete</a></td>
+
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}
